@@ -1,0 +1,64 @@
+[{
+    "jobGroup": 2,
+    "jobDesc": "queryHistoryAddress",
+    "cronGen_display": "0 0/5 * * * ?",
+    "jobCron": "0 0/5 * * * ?",
+    "executorHandler": "queryHistoryAddress",
+    "author": "Admin"
+}, {
+    "jobGroup": 2,
+    "jobDesc": "depositAnalysis",
+    "cronGen_display": "0 0/10 * * * ?",
+    "jobCron": "0 0/10 * * * ?",
+    "executorHandler": "depositAnalysis",
+    "author": "Admin"
+}, {
+    "jobGroup": 2,
+    "jobDesc": "syncSymbolFexToHuskar",
+    "cronGen_display": "0 0/30 * * * ?",
+    "jobCron": "0 0/30 * * * ?",
+    "executorHandler": "syncSymbolFexToHuskar",
+    "author": "Admin"
+}, {
+    "jobGroup": 2,
+    "jobDesc": "recheck",
+    "cronGen_display": "0 0/30 * * * ?",
+    "jobCron": "0 0/30 * * * ?",
+    "executorHandler": "recheck",
+    "author": "Admin"
+}, {
+    "jobGroup": 2,
+    "jobDesc": "checkReport",
+    "cronGen_display": "0 0 0 1/1 * ?",
+    "jobCron": "0 0 0 1/1 * ?",
+    "executorHandler": "checkReport",
+    "author": "Admin"
+}, {
+    "jobGroup": 2,
+    "jobDesc": "refundAnalysis",
+    "cronGen_display": "0 0/30 * * * ?",
+    "jobCron": "0 0/30 * * * ?",
+    "executorHandler": "refundAnalysis",
+    "author": "Admin"
+}, {
+    "jobGroup": 2,
+    "jobDesc": "resultCompensation",
+    "cronGen_display": "0 0 0/1 * * ?",
+    "jobCron": "0 0 0/1 * * ?",
+    "executorHandler": "resultCompensation",
+    "author": "Admin"
+}, {
+    "jobGroup": 2,
+    "jobDesc": "spotAccountFlowAnalyze",
+    "cronGen_display": "0 0/5 * * * ?",
+    "jobCron": "0 0/5 * * * ?",
+    "executorHandler": "spotAccountFlowAnalyze",
+    "author": "Admin"
+}, {
+    "jobGroup": 2,
+    "jobDesc": "withdrawAnalysis",
+    "cronGen_display": "0 0/20 * * * ?",
+    "jobCron": "0 0/20 * * * ?",
+    "executorHandler": "withdrawAnalysis",
+    "author": "Admin"
+}]
