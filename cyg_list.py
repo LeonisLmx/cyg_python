@@ -1,10 +1,12 @@
+# -*- coding: UTF-8 -*-
+
 import time
 
 import requests
 from bs4 import BeautifulSoup
 import random
 import datetime
-import cyg_business as cyg
+import cyg_detail as cyg
 
 url = 'http://tl.cyg.changyou.com/goods/selling?page_num={}&order_by=remaintime'
 headers = [
@@ -27,9 +29,9 @@ headers = [
     "Chrome/16.0.912.77 Safari/535.7",
     "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0 "
 ]
-a = 1
 
 
+# 获取在售账号
 def list(num):
     print("start task ,current num is %s" % num)
     try:
@@ -52,14 +54,17 @@ def list(num):
                                              minutes=float(htmlTime[htmlTime.index('小时') + 2:htmlTime.index('分钟')]),
                                              seconds=float(htmlTime[htmlTime.index('分钟') + 2:htmlTime.index('秒')]))
             print('start to deal goods')
-            cyg.good(str(entity.find('a')["href"]), d2.replace(microsecond=0), 1, None)  # 最近成交
+            cyg.good(str(entity.find('a')["href"]), d2.replace(microsecond=0), 1, None)  # 明细
     except Exception as e:
         print("list被限流，异常如下 %s" % e)
         print("因为异常，所以先sleep 1 秒")
         time.sleep(1)
         list(num)
-    num = num + 1
-    list(num)
+    if num == 1:
+        return
+    else:
+        list(num - 1)
+
 
 if __name__ == '__main__':
-    list(a)
+    list(1600)

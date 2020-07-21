@@ -3,7 +3,7 @@ import sys
 import json
 
 # 新增
-# 1 7b226964223a312c22757365726e616d65223a2261646d696e222c2270617373776f7264223a226531306164633339343962613539616262653536653035376632306638383365222c22726f6c65223a312c227065726d697373696f6e223a6e756c6c7d https://xxl-job-test.matrix.co
+# 1 7b226964223a312c22757365726e616d65223a2261646d696e222c2270617373776f7264223a226531306164633339343962613539616262653536653035376632306638383365222c22726f6c65223a312c227065726d697373696f6e223a6e756c6c7d https://xxl-job-admin-benchmark.matrix.co
 
 # 删除
 # 2 7b226964223a312c22757365726e616d65223a2261646d696e222c2270617373776f7264223a226531306164633339343962613539616262653536653035376632306638383365222c22726f6c65223a312c227065726d697373696f6e223a6e756c6c7d https://xxl-job-test.matrix.co 1,2,3,4
@@ -14,10 +14,10 @@ import json
 # 第四个参数为业务参数  add 的时候可以不传，但是需要配置config.json文件
 
 http = 'http://localhost:8080'
-add_url = '/xxl-job-admin/jobinfo/add'
-list_url = '/xxl-job-admin/jobinfo/pageList'
-remove_url = '/xxl-job-admin/jobinfo/remove'
-start_url = '/xxl-job-admin/jobinfo/start'
+add_url = '/jobinfo/add'
+list_url = '/jobinfo/pageList'
+remove_url = '/jobinfo/remove'
+start_url = '/jobinfo/start'
 
 headers = {
     'cookie': 'Idea-d59e3cab=f4d27c34-ed8b-49d9-b6e5-818d4d17ef16; '
@@ -88,6 +88,7 @@ def remove(data):
 def start(item):
     r = requests.post(start_url, item, headers=headers)
     print(r.json())
+
 
 if __name__ == '__main__':
     operate = sys.argv[1]

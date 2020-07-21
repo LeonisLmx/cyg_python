@@ -1,64 +1,64 @@
 [{
     "jobGroup": 2,
-    "jobDesc": "queryHistoryAddress",
-    "cronGen_display": "0 0/5 * * * ?",
-    "jobCron": "0 0/5 * * * ?",
+    "jobDesc": "补偿查询账户活动的IP地理信息",
+    "cronGen_display": "7 0/2 * * * ?",
+    "jobCron": "7 0/2 * * * ?",
     "executorHandler": "queryHistoryAddress",
-    "author": "Admin"
+    "author": "Admin",
+    "executorTimeout": 100,
+    "alarmEmail": "mapsic.zhao@dfgroup.pro,biwen.jin@dfgroup.pro,jingyi.li@dfgroup.pro"
 }, {
     "jobGroup": 2,
-    "jobDesc": "depositAnalysis",
-    "cronGen_display": "0 0/10 * * * ?",
-    "jobCron": "0 0/10 * * * ?",
+    "jobDesc": "充值订单Elliptic检查",
+    "cronGen_display": "36 0/10 * * * ?",
+    "jobCron": "36 0/10 * * * ?",
     "executorHandler": "depositAnalysis",
-    "author": "Admin"
+    "author": "Admin",
+    "executorTimeout": 300,
+    "alarmEmail": "mapsic.zhao@dfgroup.pro,biwen.jin@dfgroup.pro,jingyi.li@dfgroup.pro"
 }, {
     "jobGroup": 2,
-    "jobDesc": "syncSymbolFexToHuskar",
-    "cronGen_display": "0 0/30 * * * ?",
-    "jobCron": "0 0/30 * * * ?",
-    "executorHandler": "syncSymbolFexToHuskar",
-    "author": "Admin"
-}, {
-    "jobGroup": 2,
-    "jobDesc": "recheck",
-    "cronGen_display": "0 0/30 * * * ?",
-    "jobCron": "0 0/30 * * * ?",
+    "jobDesc": "历史交易Elliptic的再次检查",
+    "cronGen_display": "5 7 1/12 * * ?",
+    "jobCron": "5 7 1/12 * * ?",
     "executorHandler": "recheck",
-    "author": "Admin"
+    "author": "Admin",
+    "executorTimeout": 36000,
+    "alarmEmail": "mapsic.zhao@dfgroup.pro,biwen.jin@dfgroup.pro,jingyi.li@dfgroup.pro"
 }, {
     "jobGroup": 2,
-    "jobDesc": "checkReport",
-    "cronGen_display": "0 0 0 1/1 * ?",
-    "jobCron": "0 0 0 1/1 * ?",
+    "jobDesc": "用户月报生成",
+    "cronGen_display": "0 5 0/6 * * ?",
+    "jobCron": "0 5 0/6 * * ?",
     "executorHandler": "checkReport",
-    "author": "Admin"
+    "author": "Admin",
+    "executorTimeout": 18000,
+    "alarmEmail": "mapsic.zhao@dfgroup.pro,biwen.jin@dfgroup.pro,jingyi.li@dfgroup.pro"
 }, {
     "jobGroup": 2,
-    "jobDesc": "refundAnalysis",
-    "cronGen_display": "0 0/30 * * * ?",
-    "jobCron": "0 0/30 * * * ?",
+    "jobDesc": "充值退款订单Elliptic检查",
+    "cronGen_display": "0 0/15 * * * ?",
+    "jobCron": "0 0/15 * * * ?",
     "executorHandler": "refundAnalysis",
-    "author": "Admin"
+    "author": "Admin",
+    "executorTimeout": 300,
+    "alarmEmail": "mapsic.zhao@dfgroup.pro,biwen.jin@dfgroup.pro,jingyi.li@dfgroup.pro"
 }, {
     "jobGroup": 2,
-    "jobDesc": "resultCompensation",
-    "cronGen_display": "0 0 0/1 * * ?",
-    "jobCron": "0 0 0/1 * * ?",
+    "jobDesc": "Elliptic检查（地址和交易）补偿查询",
+    "cronGen_display": "0 4/15 * * * ?",
+    "jobCron": "0 4/15 * * * ?",
     "executorHandler": "resultCompensation",
-    "author": "Admin"
+    "author": "Admin",
+    "executorTimeout": 360,
+    "alarmEmail": "mapsic.zhao@dfgroup.pro,biwen.jin@dfgroup.pro,jingyi.li@dfgroup.pro"
 }, {
     "jobGroup": 2,
-    "jobDesc": "spotAccountFlowAnalyze",
-    "cronGen_display": "0 0/5 * * * ?",
-    "jobCron": "0 0/5 * * * ?",
-    "executorHandler": "spotAccountFlowAnalyze",
-    "author": "Admin"
-}, {
-    "jobGroup": 2,
-    "jobDesc": "withdrawAnalysis",
-    "cronGen_display": "0 0/20 * * * ?",
-    "jobCron": "0 0/20 * * * ?",
+    "jobDesc": "提币订单Elliptic检查",
+    "cronGen_display": "0 2/5 * * * ?",
+    "jobCron": "0 2/5 * * * ?",
     "executorHandler": "withdrawAnalysis",
-    "author": "Admin"
+    "author": "Admin",
+    "executorTimeout": 120,
+    "alarmEmail": "mapsic.zhao@dfgroup.pro,biwen.jin@dfgroup.pro,jingyi.li@dfgroup.pro"
 }]
